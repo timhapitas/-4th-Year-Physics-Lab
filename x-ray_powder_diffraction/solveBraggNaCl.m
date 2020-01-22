@@ -8,10 +8,8 @@ NaCl_111_Angles = zeros(1, NaCl_Crystal_Angles(3));
 
 NaCl_d_vals = [282.6e-12, ]
 
-%Columns Correspond to K_alpha and K_beta. Bragg order changes every row.%
-CuWavelengths_111 = zeros(length(NaCl_111_Angles)); %Manually defined since we are missing NaCl wavelengths in our best data set%
-CuWavelengths_110 = zeros(length(NaCl_110_Angles));
-CuWavelengths_100 = zeros(length(NaCl_111_Angles));
+CuWavelengths_111 = zeros(2, round(length(NaCl_111_Angles)/2));
+CuWavelengths_110 = 
 
 dummy1 = 1;
 dummy2 = 1;
@@ -41,11 +39,7 @@ for i = 1:length(braggAngles)
     
 end
 
-for n = 1:round(length(NaCl_100_Angles)/2)
-   
-    
-    
-end
+%NaCl_100%
 
 disp("end of braggOnly");
 

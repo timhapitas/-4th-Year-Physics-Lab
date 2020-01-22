@@ -156,12 +156,12 @@ for i = 1:length(nameVector)
 end
 
 %Return all angles and associated errors in global vectors%
-getAnglesAndErrors;
+getAngleAndErrors;
 
 braggAngles = angles;
 braggAngleErrors = errorOnAngles;
 
 
 %solves the bragg equation for the characteristic x-ray wavelengths of copper, for all NaCl crystals%
-copperWavelengths = solveBragg(braggAngles, braggAngleErrors);
+copperWavelengths = solveBragg(braggAngles, braggAngleErrors, [6, 4, 5]);
 
