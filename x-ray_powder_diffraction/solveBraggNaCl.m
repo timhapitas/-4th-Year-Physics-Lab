@@ -6,10 +6,11 @@ NaCl_100_Angles = zeros(1, NaCl_Crystal_Angles(1));
 NaCl_110_Angles = zeros(1, NaCl_Crystal_Angles(2));
 NaCl_111_Angles = zeros(1, NaCl_Crystal_Angles(3));
 
-NaCl_d_vals = [282.6e-12, ]
+NaCl_d_vals = [282, 199.4, 325.6]*1e-12;
 
-CuWavelengths_111 = zeros(2, round(length(NaCl_111_Angles)/2));
-CuWavelengths_110 = 
+Ka_111 = zeros(1, round(length(NaCl_111_Angles)/2));
+Ka_110 = zeros(1, round(length(NaCl_110_Angles)/2));
+Ka_100 = zeros(2, round(length(NaCl_100_Angles)/2));
 
 dummy1 = 1;
 dummy2 = 1;
@@ -39,7 +40,11 @@ for i = 1:length(braggAngles)
     
 end
 
-%NaCl_100%
+%100%
 
+for n = 1:length(round(length(NaCl_100_Angles)/2))
+   
+    
+    
+end
 disp("end of braggOnly");
-
