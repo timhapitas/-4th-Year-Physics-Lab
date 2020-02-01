@@ -161,6 +161,13 @@ getAngleAndErrors;
 braggAngles = angles;
 braggAngleErrors = errorOnAngles;
 
-%solves the bragg equation for the characteristic x-ray wavelengths of copper, for all NaCl crystals%
-copperWavelengths = solveBraggNaCl(braggAngles, braggAngleErrors, [6, 4, 5]);
+%solves the bragg equation for the characteristic x-ray wavelengths of copper and their errors, for all NaCl crystals%
+copperWavelengths = solveBraggNaCl(braggAngles, braggAngleErrors, [6, 4, 5]); %copperWavelengths containes all 6 computed wavelengths and their associated errors
+
+%Calculate energies of copper wavelengths
+copperEnergies = computeCopperEnergy(copperWavelengths);
+
+
+
+
 
