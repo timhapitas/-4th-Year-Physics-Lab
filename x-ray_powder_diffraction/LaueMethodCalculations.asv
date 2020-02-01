@@ -85,22 +85,22 @@ constraints = hl_ratios(constraint_indices);
 Angle_match_indices = zeros(1, length(Angle_exp));
 for i = 1:length(Angle_exp)
    
-    for j = 1:length(hl_ratios)
+    for j = 1:length(Angle_calc)
         
-        [diff, index] = min(abs(Angle_exp(i) - Angle_calc));
+        [diff, index] = min(abs(Angle_exp(i) - Angle_calc(j)));
         
         if (hl_ratios(j) == constraints(i))
            
             Angle_match_indices(i) = index;
         else
-            Angle_calc(index) = [];
+            continue;
         end
         
     end
     
 end
 
-% Angle_matches = Angle_calc(Angle_match_indices);
-% Angle_matches_diffs = abs(Angle_matches - Angle_exp);
-% 
-% confirmedMillerIndices = millerIndices_final(Angle_match_indices, :);
+Angle_matches = Angle_calc(Angle_match_indices);
+Angle_matches_diffs = abs(Angle_matches - Angle_exp);
+
+confirmedMillerIndices = millerIndices_final(Angle_match_indices, :);
